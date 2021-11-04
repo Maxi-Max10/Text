@@ -1,0 +1,193 @@
+PROGRAMACION IMPERATIVA
+------------------FUNCION Y TIPOS DE DATOS1---------------------
+2--
+function mitad(numero){
+  return numero / 2;
+}
+
+3--
+function anterior(n){
+  return n - 1;
+}
+function triple(n){
+  return n * 3;
+}
+function anteriorDelTriple(n){
+  return anterior(triple(n));
+}
+
+6--
+function extraer(saldo, monto) {
+  return Math.max(saldo-monto, 0);
+}
+
+7--
+function leGustaLeer(libro){
+  return libro > 20;
+}
+
+8--
+function estaEntre(n1,n2,n3){
+  return n1 > n2 && n1< n3;
+}
+
+function estaFueraDeRango(n1,n2,n3){
+  return n1<n2 || n1>n3;
+}
+
+9--
+function esFinDeSemana(dia){
+  return (dia === "sábado") || (dia === "domingo");
+}
+
+10--
+function longitudNombreCompleto(nombre, apellido){
+  return longitud(nombre+apellido+1);
+}
+
+11--
+function gritar(grito){
+  return("¡"+convertirEnMayuscula(grito)+"!");
+}
+
+12--
+function maximo(n1,n2){
+  if(n1>n2){
+    return n1;
+  }else{
+    return n2
+  }
+}
+
+13--
+function signo(n){
+  if(n>0){
+    return(1);
+  }else if(n===0){
+      return (0);
+  }else{
+    return(-1);
+  }
+        
+}
+
+14--
+function esNumeroDeLaSuerte(n){
+  return (n>0) && (n<100) && (n!==15);
+}
+
+15--
+function medallaSegunPuesto(puesto){
+  if(puesto===1){
+    return "oro";
+  }else if(puesto===2){
+    return "plata"
+  }else if(puesto ===3){
+    return "bronce"
+  }else{
+    return "nada"
+  }
+}
+
+16--
+4 + 4 vale 8
+"4" + "4" vale "44"
+"on" + "ce" vale "once"
+true && false vale false
+5 >= 6 vale false
+! true vale false
+
+-------------------2PRACTICA FUNCIONES Y TIPOS DE DAOS-------------
+1--
+function cuantoCuesta(p,m){
+  return((p*60)+(m*200)+1000);
+}
+
+2--
+function meConviene(p,m){
+  return(cuantoCuesta(p, m) < 6000 && p>=32 && m>=8)
+}
+
+3--
+function perimetroTriangulo(l1,l2,l3){
+  return l1+l2+l3;
+}
+function areaTriangulo(base,altura){
+  return (base*altura)/2;
+}
+
+4--
+function perimetroCuadrado(l){
+  return l*4;
+}
+function areaCuadrado(l){
+  return l*l;
+}
+
+5--
+function estaAfinado(frecuencia){
+  return frecuencia === 440;
+}
+
+6--
+function estaCerca(fre){
+  return fre>=437 && fre<=443 && fre!==440;
+}
+
+7--
+function escribirCartelito(dr,nombre,apellido){
+  return dr+" "+nombre+" "+apellido;
+}
+
+8--
+//modificá esta función
+function escribirCartelito(dr,nombre,apellido,bool){
+  if(bool){
+    return dr+" "+apellido;
+  }else{
+    return dr+" "+nombre+" "+apellido;
+  }
+}
+
+9--
+function escribirCartelitoOptimo(titulo,nombre,apellido){
+  return escribirCartelito(titulo, nombre, apellido, ((longitud(nombre)+longitud(apellido))>15)) ;
+}
+
+10--
+function decisionConMoneda(c,p,e){
+ if(c==="cara"){
+   return p;
+ }else{
+   return e;
+ }
+}
+
+11--
+function valorEnvido(n){
+  if(n>=1 && n<=7){
+    return n;
+  }else if(n===10 || n===11 || n===12){
+    return 0;
+  }
+}
+
+12--
+function puntosDeEnvidoTotales(n1,palo1,n2,palo2){
+  if(palo1===palo2 && n1!==7 && n2!==7 ){
+    return valorEnvido(n1)+valorEnvido(n2)+20;
+  }else{
+    return Math.max(valorEnvido(n1), valorEnvido(n2));
+  }
+}
+
+13--
+function valorCantoTruco(canto){
+if (canto==="truco"){
+return 2;
+}else if(canto==="retruco"){
+return 3;
+}else{
+  return 4;
+}
+}
